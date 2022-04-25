@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
     <button nbButton hero status="primary" *ngIf="!value">{{ value }}</button>
     <button nbButton hero status="success" *ngIf="value == 'X'">{{ value }}</button>
-    <button nbButton hero status="info" *ngIf="value == 'O'">{{ value }}</button>
+    <button nbButton hero status="danger" *ngIf="value == 'O'">{{ value }}</button>
   `,
 
   

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tictac-9032e": {
+      "hosting": {
+        "TicTac": [
+          "tictac-9032e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tictac-9032e"
+  }
+}

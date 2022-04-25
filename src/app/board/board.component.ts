@@ -18,10 +18,35 @@ export class BoardComponent implements OnInit {
     this.newGame();
   }
 
+  txtColor: string = "#ffffff";
+  winColor: string = "#ffffff";
+
   newGame() {
     this.squares = Array(9).fill(null);
     this.winner = "";
     this.xIsNext = true;
+    this.txtColor = "#ffffff";
+  }
+
+  getColor()
+  {
+    if(this.winner == "X")
+    {
+      this.winColor = "#00d68f"
+    }
+    else
+    {
+      this.winColor = "#ff3d71"
+    }
+
+    if(this.player == "X")
+    {
+      this.txtColor = "#00d68f"
+    }
+    else
+    {
+      this.txtColor = "#ff3d71"
+    }
   }
 
   get player() {
@@ -30,9 +55,12 @@ export class BoardComponent implements OnInit {
 
   makeMove(idx: number) {
 
-    if (!this.squares[idx]) {
-      this.squares.splice(idx, 1, this.player);
-      this.xIsNext = !this.xIsNext;
+   if(this.winner == null)
+    {
+      if (!this.squares[idx]) {
+        this.squares.splice(idx, 1, this.player);
+        this.xIsNext = !this.xIsNext;
+      }
     }
 
     this.winner = this.calculateWinner();
