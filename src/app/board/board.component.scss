@@ -32,3 +32,14 @@ app-square {
     border: 1px gray solid;
     height: 12.5rem;
 }
+
+@media only screen and (max-width: 990px)
+{
+    .board{
+        grid-template-columns: 6rem 6rem 6rem;
+    }
+
+    app-square{
+        height: 6rem;
+    }
+} 
